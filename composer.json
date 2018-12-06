@@ -1,0 +1,19 @@
+{
+    "name": "Ndp/CustomCollect",
+    "description": "Extends laravel collections",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Noe de Paz",
+            "email": "ndepaz2016@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4":{
+            "Ndp\\CustomCollect": "src/"
+        }
+    }
+}
