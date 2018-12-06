@@ -13,7 +13,7 @@
     "require": {},
     "autoload": {
         "psr-4":{
-            "Ndp\\CustomCollect": "src/"
+            "Ndp\\CustomCollect\\": "src/"
         }
     }
 }
