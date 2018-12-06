@@ -9,7 +9,7 @@
             "email": "ndepaz2016@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "beta",
     "require": {},
     "autoload": {
         "psr-4":{
