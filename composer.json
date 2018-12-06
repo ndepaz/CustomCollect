@@ -1,5 +1,5 @@
 {
-    "name": "Ndp/CustomCollect",
+    "name": "ndp/customCollect",
     "description": "Extends laravel collections",
     "type": "library",
     "license": "MIT",
