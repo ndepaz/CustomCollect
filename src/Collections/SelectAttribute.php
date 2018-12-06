@@ -10,9 +10,9 @@ namespace Ndp\CustomCollect\Collections;
 class SelectAttribute {
     protected $field,$alias,$delimiter = '.', $dummyObject;
     public function __construct(string $select) {
-        $selectAs = getRegexMatch('/^\s*([\w\.]*)\s*as\s*([\w]*)\s*$/', $select);
-        $selectLeftWithDot = getRegexMatch('/^\s*([\w\.]*)$/', $select);
-        $selectLeft = getRegexMatch('/^\s*([\w]*)\s*$/', $select);
+        $selectAs = $this->getRegexMatch('/^\s*([\w\.]*)\s*as\s*([\w]*)\s*$/', $select);
+        $selectLeftWithDot = $this->getRegexMatch('/^\s*([\w\.]*)$/', $select);
+        $selectLeft = $this->getRegexMatch('/^\s*([\w]*)\s*$/', $select);
         
         if(array_flatten($selectAs) !== []){
             $this->field = array_first($selectAs[1]);
@@ -53,5 +53,13 @@ class SelectAttribute {
             }
         }
         return $value;
+    }
+    function getRegexMatch($regexPattern,$string) {
+        $matches = null;
+        preg_match_all($regexPattern, $string, $matches);
+        if($matches == []){
+            return [];
+        }
+        return $matches;
     }
 }
