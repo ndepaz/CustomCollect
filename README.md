@@ -12,7 +12,8 @@ allows you to use similarly as a SQL select attribute statement, and returns a c
  
 ## Usage: 
 
-Assume you have some classes something like this.
+Lets say we have some classes like these. 
+
 ```sh
 class User extends Model{
     public $email;
@@ -40,7 +41,7 @@ class Address extends Model{
 ### A current of way of setting response objects.
 The static method all() in this case will return a collection.
 In most cases, you would need to loop through each object, after manipulating which properties will be send or hidden to front-end,
-then you could create a dynamic object so it can be passed to the front end as json etc..
+then you could create a dynamic object so this can be passed to the front end as json etc..
 
 ```sh
 $users = User::all()
@@ -58,7 +59,7 @@ return $usersJson->toJson();
 ```
 ### A much convenient way of setting response objects in a collection.
 To save some time in data presentation you can use the select statement with a property and its new property name separated by " as ".
-Also, you can traverse through embedded relation or properties within the given class using the dot operation.
+Also, you can traverse through embedded relation or properties within the given class using the dot operator.
 ```sh
 User::all()->select("email as userName","contact.birth_date","contact.first_name as name")->toJson();
 ```
@@ -76,7 +77,7 @@ The method callback will contain two parameters.
  });
 ```
 ### Remarks
-In the select method string argument, you can go several properties deep for the objects the it will be transversing as shown below.
+In the select method string argument, you can go several properties deep for the objects it will be transversing as shown below.
 ```sh
  User::all()->select("contact.address.street_name as Street","contact.phone as CellPhone");
 ```
