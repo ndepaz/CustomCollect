@@ -57,7 +57,7 @@ foreach($users as $user){
 }
 return $usersJson->toJson();
 ```
-### A much convenient way of setting response objects in a collection.
+### A much more convenient way of setting response objects in a collection.
 To save some time in data presentation you can use the select statement with a property and its new property name separated by " as ".
 Also, you can traverse through embedded relation or properties within the given class using the dot operator.
 ```sh
