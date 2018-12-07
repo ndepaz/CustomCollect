@@ -81,6 +81,12 @@ In the select method string argument, you can go several properties deep for the
 ```sh
  User::all()->select("contact.address.street_name as Street","contact.phone as CellPhone");
 ```
+### Package Installation
+
+```sh
+composer require ndp/customcollect
+composer dump-autoload
+```
 <br/>
 <br/>
 
