@@ -76,7 +76,7 @@ The method callback will contain two parameters.
  });
 ```
 ### Remarks
-In a select method string argument, you can go several properties deep as shown below.
+In the select method string argument, you can go several properties deep for the objects the it will be transversing as shown below.
 ```sh
  User::all()->select("contact.address.street_name as Street","contact.phone as CellPhone");
 ```
