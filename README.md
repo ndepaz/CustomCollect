@@ -8,7 +8,7 @@
 ## About
 
 This package adds a select method statement to the Laravel collection class and 
-allows you to use similarly as a SQL select attribute statement, and returns a collection of dummy objects.
+allows you to use it similar to a SQL select attribute statement and returns a collection of dynamic objects.
  
 ## Usage: 
 
