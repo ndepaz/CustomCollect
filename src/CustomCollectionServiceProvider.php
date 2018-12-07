@@ -4,7 +4,7 @@
 namespace Ndp\CustomCollect;
 use Illuminate\Support\Collection;
 use Illuminate\Support\ServiceProvider;
-use Ndp\CustomCollect\Collections\CollectionSelect;
+use Ndp\CustomCollect\Collections\SelectStatement;
 
 
 class CustomCollectionServiceProvider extends ServiceProvider
@@ -16,7 +16,7 @@ class CustomCollectionServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-//        $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
+
     }
 
     /**
@@ -35,7 +35,7 @@ class CustomCollectionServiceProvider extends ServiceProvider
                 array_pop($args);
             }
             $fields = $args;
-            return (new CollectionSelect($this))->select($fields)->setAfterSelectCallable($setAdditionalDummyProps)->get();
+            return (new SelectStatement($this))->select($fields)->setAfterSelectCallable($setAdditionalDummyProps)->get();
         });
     }
 }

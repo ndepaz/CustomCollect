@@ -15,7 +15,7 @@ use Illuminate\Support\Collection;
  * @property callable setDummyObjectProps
  * @author Noe de Paz <ndepaz2016@gmail.com>
  */
-class CollectionSelect {
+class SelectStatement {
     /* @property Collection $collection;*/
     protected $collection,$setDummyObjectProps,$selectStatements;
     public function __construct(Collection $collection)
@@ -25,7 +25,7 @@ class CollectionSelect {
 
     /**
      * @param array $selectStrings
-     * @return CollectionSelect
+     * @return SelectStatement
      */
     public function select(... $selectStrings) {
         $selectStrings = array_flatten($selectStrings);
