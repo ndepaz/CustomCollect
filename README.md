@@ -14,7 +14,7 @@ extend the laravel Model class.
  
 ## Usage: 
 
-Lets say you have some classes like this. 
+Lets say you have some classes like these. 
 
 ```sh
 class Calendar {
