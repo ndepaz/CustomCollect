@@ -79,7 +79,7 @@ Also, you can traverse through embedded relation or properties within the given 
 you can go several properties deep for the objects it will be transversing as shown below.
 ```sh
 $events = $repo->selectEventsPerDateRange($startDate, $endDate)->get();
-return $events->select(
+return $events->select("id as event_id"
     "organizer.displayName as organizer_name", 
     "organizer.email as contact_email")->toJson();
 ```
